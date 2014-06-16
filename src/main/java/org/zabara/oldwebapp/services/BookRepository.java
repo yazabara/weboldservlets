@@ -19,6 +19,6 @@ public interface BookRepository {
 
     Group getGroup(int id) throws SQLException, ClassNotFoundException;
 
-	void addBook(Book book) throws SQLException, ClassNotFoundException;
+	void addBook(Book book) throws SQLException, ClassNotFoundException, BookException;
 
 }

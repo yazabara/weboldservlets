@@ -16,6 +16,14 @@
 
 <div class="container content-wrapper">
 
+	<c:if test="${not empty error}" >
+		<div class="bs-callout bs-callout-danger">
+			<h4><fmt:message key="${error}" bundle="${common}"/></h4>
+
+			<p><fmt:message key="${error}.description" bundle="${common}"/></p>
+		</div>
+	</c:if>
+
 	<form class="container" action="/addBook/addBook" method="post">
 		<div class="input-group input-group-lg">
 			<span class="input-group-addon">@</span>

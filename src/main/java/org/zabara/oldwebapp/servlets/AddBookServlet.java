@@ -32,7 +32,7 @@ public class AddBookServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-		if ("POST".equals(req.getMethod())){
+		if ("POST".equals(req.getMethod())) {
 			Book book = new Book();
 			String name = req.getParameter("name");
 			String author = req.getParameter("author");
@@ -48,20 +48,28 @@ public class AddBookServlet extends HttpServlet {
 			book.setName(name);
 			book.setCreateDate(dateD);
 			book.setDescription(desc);
+			boolean bookaWasAdded = true;
 			try {
 				bookRepository.addBook(book);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			} catch (ClassNotFoundException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+				bookaWasAdded = false;
 			}
-			resp.sendRedirect("/bookListServlet/booklist");
-			logger.info("view redirected to [/bookListServlet/booklist]");
-		} else {
-			String path = "/WEB-INF/pages" + req.getPathInfo() + ".jsp";
-			req.getRequestDispatcher(path).forward(req, resp);
-			logger.info("view navigated to [" + path + "]");
-		}
+			if (bookaWasAdded) {
+				resp.sendRedirect("/bookListServlet/booklist");
+				logger.info("view redirected to [/bookListServlet/booklist]");
+			} else {
+				req.setAttribute("error" , "book.add.error");
+				forward(req, resp);
+			}
 
+		} else {
+			forward(req, resp);
+		}
+	}
+
+	public void forward(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String path = "/WEB-INF/pages" + req.getPathInfo() + ".jsp";
+		req.getRequestDispatcher(path).forward(req, resp);
+		logger.info("view navigated to [" + path + "]");
 	}
 }

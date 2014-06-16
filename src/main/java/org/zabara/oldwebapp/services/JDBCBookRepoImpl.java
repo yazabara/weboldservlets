@@ -285,8 +285,11 @@ public class JDBCBookRepoImpl implements BookRepository {
 	}
 
 	@Override
-	public void addBook(Book book) throws SQLException, ClassNotFoundException {
+	public void addBook(Book book) throws SQLException, ClassNotFoundException, BookException {
 		Connection connection = getConnection();
+		if (!book.isCorrect()) {
+			throw new BookException("Book is incorrect");
+		}
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO BOOK (NAME, AUTHOR, DESCRIPTION, CREATE_DATE) VALUES (?,?,?,?)");
 			preparedStatement.setString(1, book.getName());

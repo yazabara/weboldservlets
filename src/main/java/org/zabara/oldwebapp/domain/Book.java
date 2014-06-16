@@ -25,6 +25,13 @@ public class Book implements Serializable {
         this.author = author;
     }
 
+	public boolean isCorrect() {
+		if (name == null || name.isEmpty() || author == null || author.isEmpty()) {
+			return false;
+		}
+		return true;
+	}
+
     public int getId() {
         return id;
     }
