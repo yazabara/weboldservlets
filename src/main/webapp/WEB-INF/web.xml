@@ -1,0 +1,70 @@
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>bookServlet</servlet-name>
+        <servlet-class>org.zabara.oldwebapp.servlets.BookServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>bookServlet</servlet-name>
+        <url-pattern>/book/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>bookListServlet</servlet-name>
+        <servlet-class>org.zabara.oldwebapp.servlets.BookListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>bookListServlet</servlet-name>
+        <url-pattern>/bookListServlet/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>groupServlet</servlet-name>
+        <servlet-class>org.zabara.oldwebapp.servlets.GroupServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>groupServlet</servlet-name>
+        <url-pattern>/groups/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GroupListServlet</servlet-name>
+        <servlet-class>org.zabara.oldwebapp.servlets.GroupListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GroupListServlet</servlet-name>
+        <url-pattern>/groupList/*</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddBookServlet</servlet-name>
+		<servlet-class>org.zabara.oldwebapp.servlets.AddBookServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddBookServlet</servlet-name>
+		<url-pattern>/addBook/*</url-pattern>
+	</servlet-mapping>
+
+	<!--errors-->
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/notFound.jsp</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/errorPage.jsp</location>
+	</error-page>
+
+</web-app>

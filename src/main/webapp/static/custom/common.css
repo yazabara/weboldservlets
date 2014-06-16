@@ -1,0 +1,132 @@
+body {
+    margin-bottom: 0 !important;
+}
+
+.content-wrapper {
+    margin-top: 60px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: #fff;
+}
+
+.featurette.container {
+    text-align: center;
+}
+
+.featurette.container img {
+    margin: auto;
+}
+
+.parallax-bg p {
+    color: #b11116;
+}
+
+.parallax-bg h1 {
+    color: #7a43b6;
+}
+
+.mixin-code {
+    color: #049cdb;
+}
+
+.media-code {
+    color: #0064cd;
+}
+
+.value-code {
+    color: #7a43b6;
+}
+
+.px-code {
+    color: #46a546;
+}
+
+.def-code {
+    color: #f89406;
+}
+
+.alert-content-example {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color: #F00;
+}
+
+.cancel-content-example {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    border: solid 1px #999;
+}
+
+.extend-class-example, .extended-class-example, .extended-class-example2, .extended-class-example1 {
+    background-color: red;
+}
+
+.extended-class-example, .extended-class-example2 {
+    float: left;
+}
+
+.extended-class-example1 {
+    background-color: #000000;
+}
+
+.extended-class-example2 {
+    width: 100%;
+}
+
+.questions {
+    text-align: center;
+}
+
+.questions h2 {
+    font-size: 118px;
+}
+
+.questions img {
+    margin: auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .questions h2 {
+        font-size: 90px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .questions h2 {
+        font-size: 50px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+}
+
+.browser-support .supported {
+    background-color: #dff0d8 !important;
+}
+
+.browser-support .not-supported {
+    background-color: #ebccd1 !important;
+}
+
+.browser-support .partial-support {
+    background-color: #faebcc !important;
+}
