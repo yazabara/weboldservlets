@@ -1,31 +1,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="test" uri="/WEB-INF/SubStrTaglibDescriptor.tld"%>
+<%@ taglib prefix="test" uri="/WEB-INF/SubStrTaglibDescriptor.tld" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="myfn" uri="/WEB-INF/func.tld" %>
 
 <html>
 
 <head>
-    <%@include file="WEB-INF/pages/blocks/headSection.jsp" %>
-    <title>
-        <fmt:message key="common.pages.home" bundle="${common}"/>
-    </title>
+	<%@include file="WEB-INF/pages/blocks/headSection.jsp" %>
+	<title>
+		<fmt:message key="common.pages.home" bundle="${common}"/>
+	</title>
 </head>
 <body>
-<jsp:include page="WEB-INF/pages/blocks/header.jsp" >
-    <jsp:param name="active" value="Home" />
+<jsp:include page="WEB-INF/pages/blocks/header.jsp">
+	<jsp:param name="active" value="Home"/>
 </jsp:include>
 
 <div class="jumbotron">
-    <div class="container ">
-        <h1>
-            <fmt:message key="common.welcomeTo" bundle="${common}">
-                <fmt:param value="Book Portal v0.2"/>
-            </fmt:message>
-        </h1>
-        <p>
-            <fmt:message key="common.projectInfo" bundle="${common}"/>
-        </p>
+	<div class="container ">
+		<h1>
+			<fmt:message key="common.welcomeTo" bundle="${common}">
+				<fmt:param value="Book Portal v0.2"/>
+			</fmt:message>
+		</h1>
+
+		<p>
+			<fmt:message key="common.projectInfo" bundle="${common}"/>
+		</p>
 
 		<h2><fmt:message key="common.custom.taglib.header" bundle="${common}"/></h2>
 		<c:set var="stringVar" value="Substring123"/>
@@ -40,10 +42,14 @@
 			</p>
 		</c:forEach>
 
-    </div>
+		<p>
+			My func is ${myfn:substring(stringVar,1 ,5)}
+		</p>
+
+	</div>
 </div>
 
-<div class="container" >
+<div class="container">
 
 </div>
 
