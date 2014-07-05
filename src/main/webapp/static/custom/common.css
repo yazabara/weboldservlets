@@ -1,3 +1,10 @@
+#messagebox {
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    margin-top: 40px;
+}
+
 body {
     margin-bottom: 0 !important;
 }

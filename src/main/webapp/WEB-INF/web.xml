@@ -67,4 +67,48 @@
 		<location>/errorPage.jsp</location>
 	</error-page>
 
+    <!--security-->
+
+    <!--Basic-->
+    <!--<login-config>-->
+        <!--<auth-method>BASIC</auth-method>-->
+    <!--</login-config>-->
+
+    <!--<security-constraint>-->
+        <!--<web-resource-name>Book-portal</web-resource-name>-->
+        <!--<web-resource-collection>-->
+            <!--<url-pattern>/bookListServlet/*</url-pattern>-->
+            <!--<http-method>GET</http-method>-->
+            <!--<http-method>POST</http-method>-->
+        <!--</web-resource-collection>-->
+        <!--<auth-constraint>-->
+            <!--<role-name>tomcat</role-name>-->
+            <!--<role-name>role1</role-name>-->
+        <!--</auth-constraint>-->
+    <!--</security-constraint>-->
+
+    <!--Form-->
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/login-faild.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+
+    <security-constraint>
+        <web-resource-name>Book-portal</web-resource-name>
+        <web-resource-collection>
+            <url-pattern>/bookListServlet/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>tomcat</role-name>
+            <role-name>role1</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+
 </web-app>

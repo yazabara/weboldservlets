@@ -3,6 +3,7 @@
 <%@ taglib prefix="test" uri="/WEB-INF/SubStrTaglibDescriptor.tld" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="myfn" uri="/WEB-INF/func.tld" %>
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 
 <html>
 
@@ -12,12 +13,14 @@
 		<fmt:message key="common.pages.home" bundle="${common}"/>
 	</title>
 </head>
+
 <body>
 <jsp:include page="WEB-INF/pages/blocks/header.jsp">
 	<jsp:param name="active" value="Home"/>
 </jsp:include>
 
 <div class="jumbotron">
+
 	<div class="container ">
 		<h1>
 			<fmt:message key="common.welcomeTo" bundle="${common}">
