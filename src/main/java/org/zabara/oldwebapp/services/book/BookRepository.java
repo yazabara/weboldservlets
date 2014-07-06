@@ -1,4 +1,4 @@
-package org.zabara.oldwebapp.services;
+package org.zabara.oldwebapp.services.book;
 
 import org.zabara.oldwebapp.domain.Book;
 import org.zabara.oldwebapp.domain.Group;

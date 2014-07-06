@@ -1,4 +1,4 @@
-package org.zabara.oldwebapp.services;
+package org.zabara.oldwebapp.services.book;
 
 import com.google.common.collect.Lists;
 import org.apache.log4j.Logger;

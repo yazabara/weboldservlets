@@ -2,10 +2,9 @@ package org.zabara.oldwebapp.servlets;
 
 import org.apache.log4j.Logger;
 import org.zabara.oldwebapp.domain.Book;
-import org.zabara.oldwebapp.services.BookException;
-import org.zabara.oldwebapp.services.BookRepoImpl;
-import org.zabara.oldwebapp.services.BookRepository;
-import org.zabara.oldwebapp.services.JDBCBookRepoImpl;
+import org.zabara.oldwebapp.services.book.BookException;
+import org.zabara.oldwebapp.services.book.BookRepository;
+import org.zabara.oldwebapp.services.book.JDBCBookRepoImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

@@ -1,4 +1,4 @@
-package org.zabara.oldwebapp.services;
+package org.zabara.oldwebapp.services.book;
 
 /**
  * Created by Yaroslav on 15.06.2014.

@@ -6,7 +6,7 @@
 <html>
 
 <head>
-    <%@include file="WEB-INF/pages/blocks/headSection.jsp" %>
+    <%@include file="blocks/headSection.jsp" %>
     <title>
         <fmt:message key="common.pages.book" bundle="${common}"/>
     </title>
@@ -15,11 +15,11 @@
 <div class="container">
     <div class="jumbotron">
         <div class="container ">
-            <form class="form-signin" role="form" action="j_security_check">
+            <form class="form-signin" role="form" action="/userValidator" method="post">
                 <h2 class="form-signin-heading">Please sign in</h2>
 
-                <input type="text" class="form-control" placeholder="username" name="j_username" required="" autofocus="">
-                <input type="password" class="form-control" placeholder="Password" name="j_password" required="">
+                <input type="text" class="form-control" placeholder="username" name="name" required="" autofocus="">
+                <input type="password" class="form-control" placeholder="Password" name="password" required="">
 
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             </form>

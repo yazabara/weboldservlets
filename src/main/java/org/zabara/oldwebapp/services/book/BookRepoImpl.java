@@ -1,4 +1,4 @@
-package org.zabara.oldwebapp.services;
+package org.zabara.oldwebapp.services.book;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
